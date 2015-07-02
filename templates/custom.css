@@ -1,0 +1,119 @@
+
+* {
+  margin : 0;
+  padding : 0;
+}
+
+.qutton {
+  margin:10px;
+  box-sizing : content-box !important;
+  background-repeat : no-repeat !important;
+  background-position: center center !important;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  cursor : auto;
+}
+
+.qutton.close {
+  position : absolute !important;
+  cursor : pointer;
+}
+
+
+@import url("http://getbootstrap.com/dist/css/bootstrap.css");
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
+body {
+  background: none repeat scroll 0 0 white;
+}
+
+nav.sidebar-menu-collapsed {
+  width: 75px;
+}
+
+nav.sidebar-menu-expanded {
+  width: 120px;
+}
+
+nav.sidebar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  background: none repeat scroll 0 0 #0099ff;
+  color: white;
+  padding: 0;
+}
+
+nav.sidebar a#justify-icon {
+  outline: 0;
+  color: white;
+  font-size: 24px;
+  font-style: normal;
+}
+
+nav.sidebar a#logout-icon {
+  outline: 0;
+  color: white;
+  font-size: 24px;
+  font-style: normal;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+nav.sidebar ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 60px;
+}
+
+nav.sidebar ul li {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+nav.sidebar ul li div.expandable {
+  outline: 0;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav.sidebar ul li div.expandable:hover {
+  color: #bbbbbb;
+}
+
+nav.sidebar ul li  span.expanded-element {
+  margin-left: 10px;
+  display: none;
+  font-size: 14px;
+  color:white;
+  position: relative;
+  bottom: 0px;
+}
+
+nav.sidebar ul li.active {
+  background: none repeat scroll 0 0 black;
+  border-radius: 4px;
+  text-align: center;
+  margin-left: -4px;
+  padding: 4px;
+}
+
+nav.sidebar ul li.active div.expandable {
+  color: white !important;
+}
+
+nav.sidebar ul li.active div.expandable:hover {
+  color: white !important;
+}
+
+
+.footer {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+} 
