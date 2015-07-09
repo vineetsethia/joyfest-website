@@ -31,8 +31,8 @@
 
 		// Configuration of the popped up dialog
 		this.dialogConfig = {
-			width : 1024,
-			height : 600,
+			width : $(window).width()-85,
+			height : $(window).height()-75,
 			backgroundColor : toHex(this.$dialog.css('background-color')),
 			borderRadius : this.$dialog.css('border-radius'),
 			zIndex : this.$dialog.css('z-index')
@@ -79,11 +79,35 @@
 	Qutton.prototype.closeDialog = function() {
 		this.setIcon();
 		this.animateOut();
+		
+		var src=$('.qutton');
+		var dst=$('.col-xs-6');
+		for(var i=1;i<=6;i++)
+		{
+			var cont=$('#'+i);
+			$(dst[i-1]).append(cont);
+		}
+		$('nav').hide();
+			
 	};
 
 	Qutton.prototype.openDialog = function() {
 		this.removeIcon();
 		this.animateIn();
+		/*
+		if( $('nav').is(':hidden'))
+			$('nav').show();
+		else
+			$('nav').hide();
+		*/
+		for(var i=1;i<=6;i++){
+			var cnt=$('#'+i);
+			$('nav').append(cnt);	
+		}		
+		$('nav').show();
+		
+		
+		
 	};
 
 	Qutton.prototype.setIcon = function() {
@@ -101,8 +125,8 @@
 		var that = this;
 		// Translate amount to make the dialog look like exploding from desired location
 		var translate = {
-			X : -1 * (this.dialogConfig.width/2 - this.quttonConfig.width/2),
-			Y : -0.5 * (this.dialogConfig.height/2 - this.quttonConfig.width/2)
+			X : 70,
+			Y : -2*this.$container.offset().top-20
 		};
 
 		var inSequence  = [
@@ -178,22 +202,22 @@
 
 		// Coordinates of top center of Qutton before it converts to a a dialog
 		var buttonCenterTop = {
-			top : position.top,
-			left : position.left - (this.quttonConfig.width/0.75)
+			top : 0,
+			left : 60
 		};
 
 		// Coordinates of the dialog once it opens
 		var dialogCoords = {
-			top : buttonCenterTop.top-80,
-			left : buttonCenterTop.left - (this.dialogConfig.width/2),
+			top : 0,
+			left : 100,
 		};
 
 		// How much the dialog extends beyond the document
 		var extend  = {
-			left : dialogCoords.left,
-			right : windowWidth - (dialogCoords.left + this.dialogConfig.width),
-			top : dialogCoords.top,
-			bottom : windowHeight - (dialogCoords.top + this.dialogConfig.height)
+			left :75,
+			right : 0,
+			top : 0,
+			bottom :0
 		};
 
 		// Amount to translate in X and Y if possible to bring dialog in bounds of document
@@ -223,11 +247,13 @@
 		// Handles the click on Qutton
 		click : function() {
 			var that = this;
-			this.$container.on('click', function(){
+			this.$container.on('click', function(){				
 				if(!that.isOpen){
 					that.openDialog();
 				}
+				
 			});
+			
 
 		},
 
@@ -235,12 +261,15 @@
 		click_document : function() {
 			var that = this;
 			$(document).on('click', function(event) {
+				
 				if(!$(event.target).closest(that.$container.selector).length){
 					if(that.isOpen){
 						that.closeDialog();
 					} 
 				}
+			
 			});
+			
 		},
 
 		// Initializes clicks on close button if it exists
@@ -249,10 +278,12 @@
 			if(this.$closeButton.length){
 				this.$closeButton.on('click', function(event){
 						if(that.isOpen){
-							that.closeDialog();
+							that.closeDialog();	
 					}
+
 				});
 			}
+			
 		}
 
 	};

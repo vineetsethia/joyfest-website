@@ -1,0 +1,18 @@
+body{
+height:100%;
+   width:100%;
+   background-image:url(4.jpg)
+   background-repeat:no-repeat;
+   background-size:cover;
+   
+   filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.4.jpg',sizingMethod='scale');
+   -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='4.jpg',sizingMethod='scale')";
+}
+td#Pics {width:250px; height:300px; vertical-align:top}
+img#books {position:absolute; border:0px; width:250px; height:350px; z-
+index:2}
+img#girls {position:absolute; border:0px; width:250px; height:350px; z-index:1}
+img#children {position:absolute; border:0px; width:250px; height:350px; z-
+index:1}
+img#animal {position:absolute; border:0px; width:250px; height:350px; z-
+index:1}

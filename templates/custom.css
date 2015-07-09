@@ -117,3 +117,17 @@ nav.sidebar ul li.active div.expandable:hover {
   clear:both;
   padding-top:20px;
 } 
+
+
+.red{
+  background-color: red;
+}
+
+.qutton_dialog{
+  position: absolute;
+}
+
+
+
+
+
