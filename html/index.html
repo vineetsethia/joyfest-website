@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Responsive layout with full page and simple navigation.</title>
+    
+    
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link rel="stylesheet" type="text/css" href="../templates/custom.css">
+      <link rel="stylesheet" type="text/css" href="../templates/imagenav.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    
+      <link rel="stylesheet" href="../templates/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+  
+
+<div id="book">
+
+
+  <input id="showradio" type="checkbox" name="navigation" checked="checked"/>
+  <label for="showradio" class="shownavigation"></label>
+
+  <input class="move" id="page1" type="radio" name="navigation" checked="checked"/>
+  <label data-page="0" for="page1" class="check radio home"></label>
+
+  <input class="move" id="page2" type="radio" name="navigation"/>
+  <label data-page="100" for="page2" class="check radio events"></label>
+
+  <input class="move" id="page3" type="radio" name="navigation"/>
+  <label data-page="200" for="page3" class="check radio  articles"></label>
+
+  <input class="move" id="page4" type="radio" name="navigation"/>
+  <label data-page="300" for="page4" class="check radio updates"></label>
+  
+  <input class="move" id="page5" type="radio" name="navigation"/>
+  <label data-page="400" for="page5" class="check radio comments"></label>
+  
+  <input class="move" id="page6" type="radio" name="navigation"/>
+  <label data-page="500" for="page6" class="check radio about"></label>
+
+
+  <div id="content">
+    <!--Home-->
+    <div class="page" id="one">&nbsp
+		<h1 align="center">Home</h1>
+      <div>
+        
+      </div>
+    
+    </div>
+  <!--Home ends-->
+
+
+
+
+
+    <!--Events-->
+    <div class="page" id="two">&nbsp
+      <h1 align="center">Events</h1>
+      <div class="row" style="z-index:1;">
+  <div class="col-xs-1">
+     <input id="showradio" type="checkbox" name="navigation" checked="checked"/>
+    <label for="showradio" class="shownavigation"></label>
+
+    <input class="move" id="page1" type="radio" name="navigation" checked="checked"/>
+  <label data-page="0" for="page1" class="check radio home"></label>
+
+  <input class="move" id="page2" type="radio" name="navigation"/>
+  <label data-page="100" for="page2" class="check radio events"></label>
+
+  <input class="move" id="page3" type="radio" name="navigation"/>
+  <label data-page="200" for="page3" class="check radio  articles"></label>
+
+  <input class="move" id="page4" type="radio" name="navigation"/>
+  <label data-page="300" for="page4" class="check radio updates"></label>
+  
+  <input class="move" id="page5" type="radio" name="navigation"/>
+  <label data-page="400" for="page5" class="check radio comments"></label>
+  
+  <input class="move" id="page6" type="radio" name="navigation"/>
+  <label data-page="500" for="page6" class="check radio about"></label>
+</div>
+    
+      <div class="col-xs-4 ">
+         <hr>
+        <h2 align="center">Previous Events</h2>
+        <div class="prev-events" style="width:100%;height:450px;overflow:auto;">
+          <div class="card" >
+            <img  style="width:40%;height:40%;" src="http://thumb7.shutterstock.com/display_pic_with_logo/524773/149992595/stock-photo-the-word-events-in-cut-out-magazine-letters-pinned-to-a-cork-notice-board-events-may-refer-to-news-149992595.jpg">
+            <div style="float:right;">
+            <h3 >Title of event</h3>
+            <p>Brief description of Events</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="btn btn-success">More Details</a>
+            </div>        
+
+          </div>
+          <div class="card" >
+            <img style="width:40%;height:40%;" src="http://thumb7.shutterstock.com/display_pic_with_logo/524773/149992595/stock-photo-the-word-events-in-cut-out-magazine-letters-pinned-to-a-cork-notice-board-events-may-refer-to-news-149992595.jpg">
+            <div style="float:right;">
+            <h3 >Title of event</h3>
+            <p>Brief description of Events</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="btn btn-success">More Details</a>
+            </div>        
+
+          </div>
+
+          <div class="card" >
+            <img style="width:40%;height:40%;" src="http://thumb7.shutterstock.com/display_pic_with_logo/524773/149992595/stock-photo-the-word-events-in-cut-out-magazine-letters-pinned-to-a-cork-notice-board-events-may-refer-to-news-149992595.jpg">
+            <div style="float:right;">
+            <h3 >Title of event</h3>
+            <p>Brief description of Events</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="btn btn-success">More Details</a>
+            </div>        
+
+          </div>
+          
+
+        </div>
+      </div>
+        
+    <div class="col-xs-6 col-sm-6">
+      <hr>
+        <h2 align="center">
+          Upcomming Events
+          <div class="upcomming-events" style="height:450px;overflow:auto;">
+            <div class="card" >
+            <img style="width:40%;height:40%;" src="http://thumb7.shutterstock.com/display_pic_with_logo/524773/149992595/stock-photo-the-word-events-in-cut-out-magazine-letters-pinned-to-a-cork-notice-board-events-may-refer-to-news-149992595.jpg">
+            <div style="float:right;">
+            <h3 >Title of event</h3>
+            <p>Brief description of Events</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="btn btn-success">More Details</a>
+            </div>        
+
+          </div>
+          <div class="card" >
+            <img style="width:40%;height:40%;" src="http://thumb7.shutterstock.com/display_pic_with_logo/524773/149992595/stock-photo-the-word-events-in-cut-out-magazine-letters-pinned-to-a-cork-notice-board-events-may-refer-to-news-149992595.jpg">
+            <div style="float:right;">
+            <h3 >Title of event</h3>
+            <p>Brief description of Events</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="btn btn-success">More Details</a>
+            </div>        
+
+          </div>
+          </div>
+        </h2>
+         
+    
+    </div>
+    </div>
+    </div>
+    <!--Events ends-->
+
+
+
+
+
+
+    <!--Article -->
+    <div class="page" id="three">&nbsp
+      <h1 align="center">Articles</h1>
+      <div class="row" style="z-index:1;">
+  <div class="col-xs-1">
+     <input id="showradio" type="checkbox" name="navigation" checked="checked"/>
+    <label for="showradio" class="shownavigation"></label>
+
+    <input class="move" id="page1" type="radio" name="navigation" checked="checked"/>
+  <label data-page="0" for="page1" class="check radio home"></label>
+
+  <input class="move" id="page2" type="radio" name="navigation"/>
+  <label data-page="100" for="page2" class="check radio events"></label>
+
+  <input class="move" id="page3" type="radio" name="navigation"/>
+  <label data-page="200" for="page3" class="check radio  articles"></label>
+
+  <input class="move" id="page4" type="radio" name="navigation"/>
+  <label data-page="300" for="page4" class="check radio updates"></label>
+  
+  <input class="move" id="page5" type="radio" name="navigation"/>
+  <label data-page="400" for="page5" class="check radio comments"></label>
+  
+  <input class="move" id="page6" type="radio" name="navigation"/>
+  <label data-page="500" for="page6" class="check radio about"></label>
+</div>
+    
+      <div class="col-xs-10" style="height:34em;overflow:auto;">
+         <hr>
+         <p>Click on article to read more...</p>
+        <div class="row">
+          <div class="col-xs-6">
+             
+            <div class="card article-box" >
+            
+            <h3 ><a href="">Title of Article</a></h3>
+            <p>Brief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of Events</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>  
+          </div>
+          <div class="col-xs-6">
+            <div class="card article-box" >
+            
+            <h3 ><a href="">Title of Article</a></h3>
+            <p>Brief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of Events</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div> 
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="card article-box" >
+            
+            <h3 ><a href="">Title of Article</a></h3>
+            <p>Brief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of Events</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div> 
+          </div>
+          <div class="col-xs-6">
+            <div class="card article-box" >
+            
+            <h3 ><a href="">Title of Article</a></h3>
+            <p>Brief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of Events</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div> 
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="card article-box" >
+            
+            <h3 ><a href="">Title of Article</a></h3>
+            <p>Brief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of EventsBrief description of Events</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div> 
+          </div>
+          <div class="col-xs-6">
+            
+          </div>
+        </div>
+      
+      </div>
+        
+   
+    </div>
+    </div>
+    <!--Articles ends-->
+
+
+
+
+    <!--Update-->
+    <div class="page" id="four">&nbsp
+      <h1 align="center">Updates</h1>
+      <div class="row" style="z-index:1;">
+  <div class="col-xs-1">
+     <input id="showradio" type="checkbox" name="navigation" checked="checked"/>
+    <label for="showradio" class="shownavigation"></label>
+
+    <input class="move" id="page1" type="radio" name="navigation" checked="checked"/>
+  <label data-page="0" for="page1" class="check radio home"></label>
+
+  <input class="move" id="page2" type="radio" name="navigation"/>
+  <label data-page="100" for="page2" class="check radio events"></label>
+
+  <input class="move" id="page3" type="radio" name="navigation"/>
+  <label data-page="200" for="page3" class="check radio  articles"></label>
+
+  <input class="move" id="page4" type="radio" name="navigation"/>
+  <label data-page="300" for="page4" class="check radio updates"></label>
+  
+  <input class="move" id="page5" type="radio" name="navigation"/>
+  <label data-page="400" for="page5" class="check radio comments"></label>
+  
+  <input class="move" id="page6" type="radio" name="navigation"/>
+  <label data-page="500" for="page6" class="check radio about"></label>
+</div>
+    
+      <div class="col-xs-4 ">
+         <hr>
+        <div class="update" style="height:35em;overflow:auto;"> 
+          
+        </div>
+      
+      </div>
+        
+    <div class="col-xs-6 col-sm-6">
+        <hr>
+         <div class="update" style="height:35em;overflow:auto;"> 
+          
+        </div>
+    
+    </div>
+    </div>
+    </div>
+    <!--Update ends-->
+
+
+    <!--Comments-->
+	<div class="page" id="five">&nbsp
+
+  <h1 align="center" style="">Comments</h1>
+    <div class="row" style="z-index:1;">
+  <div class="col-xs-1">
+     <input id="showradio" type="checkbox" name="navigation" checked="checked"/>
+    <label for="showradio" class="shownavigation"></label>
+
+    <input class="move" id="page1" type="radio" name="navigation" checked="checked"/>
+  <label data-page="0" for="page1" class="check radio home"></label>
+
+  <input class="move" id="page2" type="radio" name="navigation"/>
+  <label data-page="100" for="page2" class="check radio events"></label>
+
+  <input class="move" id="page3" type="radio" name="navigation"/>
+  <label data-page="200" for="page3" class="check radio  articles"></label>
+
+  <input class="move" id="page4" type="radio" name="navigation"/>
+  <label data-page="300" for="page4" class="check radio updates"></label>
+  
+  <input class="move" id="page5" type="radio" name="navigation"/>
+  <label data-page="400" for="page5" class="check radio comments"></label>
+  
+  <input class="move" id="page6" type="radio" name="navigation"/>
+  <label data-page="500" for="page6" class="check radio about"></label>
+</div>
+    
+      <div class="col-xs-4 ">
+         <hr>
+        <div class="card" style="background-color:white;margin:10px;">
+        <marquee direction="up">  comment<br> comment<br> comment</marquee>
+        </div>
+      
+      </div>
+        
+    <div class="col-xs-6 col-sm-6">
+        
+        <form action="" method="POST" >
+    <hr><br><b><u>Post a Comment:</u></b><br>
+        <div class="form-group"><label>Email:<input type="text" class="form-control" id="email" name="email" placeholder="enter your email here"><br></div>
+       <div class="form-group"><label> Name: <input type="text" class="form-control" id="name" name="name" placeholder="enter your name here"><br></div>
+    <div class="form-group"><label>Comment:</label>  <textarea class="form-control" rows="5" id="comment" name="comment" placeholder="what do you feel about us?"></textarea><br></div>
+    <button type="submit" class="btn btn-default" onclick="verifyemail()">POST</button>
+    <script>
+    function verifyemail()
+    {
+    var g,flag=1;
+    g=document.forms["rform"]["email"].value;
+    //email validation  
+    x=g.indexOf("@");
+    y=g.lastIndexOf(".");
+    if(x<1 || y<x+2 || y+2>=g.length) 
+    {
+     flag=0;
+      alert("enter a valid email address");
+      document.rform.email.focus();
+}
+
+    }
+    </script>
+    </form>    
+    
+    </div>
+    </div>
+
+  </div>
+  <!--Comments End-->
+
+  <!--About -->
+	<div class="page" id="six">&nbsp
+      <h1 align="center">About </h1>
+       <div class="row" style="z-index:1;">
+  <div class="col-xs-1">
+     <input id="showradio" type="checkbox" name="navigation" checked="checked"/>
+    <label for="showradio" class="shownavigation"></label>
+
+    <input class="move" id="page1" type="radio" name="navigation" checked="checked"/>
+  <label data-page="0" for="page1" class="check radio home"></label>
+
+  <input class="move" id="page2" type="radio" name="navigation"/>
+  <label data-page="100" for="page2" class="check radio events"></label>
+
+  <input class="move" id="page3" type="radio" name="navigation"/>
+  <label data-page="200" for="page3" class="check radio  articles"></label>
+
+  <input class="move" id="page4" type="radio" name="navigation"/>
+  <label data-page="300" for="page4" class="check radio updates"></label>
+  
+  <input class="move" id="page5" type="radio" name="navigation"/>
+  <label data-page="400" for="page5" class="check radio comments"></label>
+  
+  <input class="move" id="page6" type="radio" name="navigation"/>
+  <label data-page="500" for="page6" class="check radio about"></label>
+</div>
+    
+      <div class="col-xs-5 ">
+         <hr>
+        <div class="abt" style="height:35em;overflow:auto;"> 
+          
+        </div>
+      </div>
+        
+    <div class="col-xs-5">
+        <hr>
+         <div class="abt" style="height:35em;overflow:auto;"> 
+          
+        </div>
+    
+    </div>
+    </div>
+  </div>
+
+  <!--About End-->
+  </div>
+</div>
+    
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
+    <script type="text/javascript" src="../jquery/imagenav.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script type="text/javascript" src="../jquery/custom.js"></script>
+    
+    
+  </body>
+</html>
