@@ -216,3 +216,23 @@ div > div {
 }
 
 */
+#slideshow { 
+    margin: 0px auto; 
+    position: relative; 
+    width: 100%; 
+    height: 35em; 
+    padding: 10px; 
+    
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    right: 0px; 
+    bottom: 0px; 
+}
+#slideshow > div > img {
+    width:100%;
+    height:100%;
+}
