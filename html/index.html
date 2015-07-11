@@ -28,7 +28,7 @@
 <div id="book">
 
 
-  <input id="showradio" type="checkbox" name="navigation" checked="checked"/>
+  <input id="showradio" type="checkbox" name="navigation" />
   <label for="showradio" class="shownavigation"></label>
 
   <input class="move" id="page1" type="radio" name="navigation" checked="checked"/>
@@ -54,15 +54,81 @@
     <!--Home-->
     <div class="page" id="one">&nbsp
 		<h1 align="center">Home</h1>
-      <div>
+      <div class="row">
+          <div class="col-xs-8 col-xs-offset-1">
+              <div id="slideshow">
+                <div>
+                <img src="../images/1.jpg">
+                 </div>
+                <div>
+                <img src="../images/2.jpg">
+                 </div>
+               <div>
+                <img src="../images/3.jpg">
+             </div>
+             <div>
+                <img src="../images/4.jpg">
+             </div>
+            </div>
+          </div> 
+          <div class="col-xs-3">
+          <h2>News & Updates</h2>
+            <div class="card">
+      <marquee direction="up">update<br>update<br>update</marquee>
+    </div>
         
+          </div>    
       </div>
     
     </div>
   <!--Home ends-->
 
 
+   <!--About -->
+  <div class="page" id="six">&nbsp
+      <h1 align="center">About(Joyfest) </h1>
+       <div class="row" style="z-index:1;">
+  <div class="col-xs-1">
+     <input id="showradio" type="checkbox" name="navigation" checked="checked"/>
+    <label for="showradio" class="shownavigation"></label>
 
+    <input class="move" id="page1" type="radio" name="navigation" checked="checked"/>
+  <label data-page="0" for="page1" class="check radio home"></label>
+
+  <input class="move" id="page2" type="radio" name="navigation"/>
+  <label data-page="100" for="page2" class="check radio events"></label>
+
+  <input class="move" id="page3" type="radio" name="navigation"/>
+  <label data-page="200" for="page3" class="check radio  articles"></label>
+
+  <input class="move" id="page4" type="radio" name="navigation"/>
+  <label data-page="300" for="page4" class="check radio updates"></label>
+  
+  <input class="move" id="page5" type="radio" name="navigation"/>
+  <label data-page="400" for="page5" class="check radio comments"></label>
+  
+  <input class="move" id="page6" type="radio" name="navigation"/>
+  <label data-page="500" for="page6" class="check radio about"></label>
+</div>
+    
+      <div class="col-xs-5 ">
+         <hr>
+        <div class="abt" style="height:35em;overflow:auto;"> 
+          
+        </div>
+      </div>
+        
+    <div class="col-xs-5">
+        <hr>
+         <div class="abt" style="height:35em;overflow:auto;"> 
+          
+        </div>
+    
+    </div>
+    </div>
+  </div>
+
+  <!--About End-->
 
 
     <!--Events-->
@@ -374,51 +440,7 @@
   </div>
   <!--Comments End-->
 
-  <!--About -->
-	<div class="page" id="six">&nbsp
-      <h1 align="center">About </h1>
-       <div class="row" style="z-index:1;">
-  <div class="col-xs-1">
-     <input id="showradio" type="checkbox" name="navigation" checked="checked"/>
-    <label for="showradio" class="shownavigation"></label>
-
-    <input class="move" id="page1" type="radio" name="navigation" checked="checked"/>
-  <label data-page="0" for="page1" class="check radio home"></label>
-
-  <input class="move" id="page2" type="radio" name="navigation"/>
-  <label data-page="100" for="page2" class="check radio events"></label>
-
-  <input class="move" id="page3" type="radio" name="navigation"/>
-  <label data-page="200" for="page3" class="check radio  articles"></label>
-
-  <input class="move" id="page4" type="radio" name="navigation"/>
-  <label data-page="300" for="page4" class="check radio updates"></label>
-  
-  <input class="move" id="page5" type="radio" name="navigation"/>
-  <label data-page="400" for="page5" class="check radio comments"></label>
-  
-  <input class="move" id="page6" type="radio" name="navigation"/>
-  <label data-page="500" for="page6" class="check radio about"></label>
-</div>
-    
-      <div class="col-xs-5 ">
-         <hr>
-        <div class="abt" style="height:35em;overflow:auto;"> 
-          
-        </div>
-      </div>
-        
-    <div class="col-xs-5">
-        <hr>
-         <div class="abt" style="height:35em;overflow:auto;"> 
-          
-        </div>
-    
-    </div>
-    </div>
-  </div>
-
-  <!--About End-->
+ 
   </div>
 </div>
     
