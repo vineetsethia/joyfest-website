@@ -2,7 +2,7 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>Responsive layout with full page and simple navigation.</title>
+    <title>Joyfest </title>
     
     
       <meta charset="utf-8">
@@ -28,88 +28,65 @@
 <div id="book">
 
 
-  <input id="showradio" type="checkbox" name="navigation" />
+  <input id="showradio" type="checkbox" name="navigation" checked="checked"/>
   <label for="showradio" class="shownavigation"></label>
 
   <input class="move" id="page1" type="radio" name="navigation" checked="checked"/>
-  <label data-page="0" for="page1" class="check radio home"></label>
+  <label data-page="0" for="page1" class="check radio home"><span><br><br>&nbsp;&nbsp;Home</span></label>
+
 
   <input class="move" id="page2" type="radio" name="navigation"/>
-  <label data-page="100" for="page2" class="check radio events"></label>
+  <label data-page="100" for="page2" class="check radio events"><span><br><br>&nbsp;&nbsp;About</span></label>
 
   <input class="move" id="page3" type="radio" name="navigation"/>
-  <label data-page="200" for="page3" class="check radio  articles"></label>
+  <label data-page="200" for="page3" class="check radio  articles"><span><br><br>&nbsp;&nbsp;Events</span></label>
 
   <input class="move" id="page4" type="radio" name="navigation"/>
-  <label data-page="300" for="page4" class="check radio updates"></label>
+  <label data-page="300" for="page4" class="check radio updates"><span><br><br>&nbsp;&nbsp;Articles</span></label>
   
   <input class="move" id="page5" type="radio" name="navigation"/>
-  <label data-page="400" for="page5" class="check radio comments"></label>
+  <label data-page="400" for="page5" class="check radio comments"><span><br><br>&nbsp;&nbsp;Group</span></label>
   
   <input class="move" id="page6" type="radio" name="navigation"/>
-  <label data-page="500" for="page6" class="check radio about"></label>
+  <label data-page="500" for="page6" class="check radio about"><span><br><br>&nbsp;&nbsp;Comments</span></label>
 
 <!--Login -->
-<div class="center" style="float:right;"><button data-toggle="modal" data-target="#squarespaceModal" class="btn btn-primary center-block">Click Me</button></div>
 
-
-<!-- line modal -->
-<div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-      <h3 class="modal-title" id="lineModalLabel">My Modal</h3>
-    </div>
-    <div class="modal-body">
-      
-            <!-- content goes here -->
-      <form>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-              </div>
-             <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-
-    </div>
-    <div class="modal-footer">
-      <div class="btn-group btn-group-justified" role="group" aria-label="group button">
-        <div class="btn-group" role="group">
-          <button type="button" class="btn btn-default" data-dismiss="modal"  role="button">Close</button>
-        </div>
-        <div class="btn-group btn-delete hidden" role="group">
-          <button type="button" id="delImage" class="btn btn-default btn-hover-red" data-dismiss="modal"  role="button">Delete</button>
-        </div>
-        <div class="btn-group" role="group">
-          <button type="button" id="saveImage" class="btn btn-default btn-hover-green" data-action="save" role="button">Save</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  </div>
 <!--Login ends-->
 
 <!--Register-->
 
 <!--Register ends-->
+<br><br><br><br><br><br>
+<footer style="background-color:#F8F8F8">
+  <hr><center style="background-color:yellow">&copy; Joyfest NIT Surat</center>
+  <p style="background-color:#F8F8F8">
+      <!--Social icons-->
+<div style="float:right;margin:0px;padding:0px;">
+<!--Facebook icon-->
+<a href="" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/YdvNzBsfTrqg9Cx9Tozh_Facebook-e1386022800280.png" style="height:20px; width:20px" /> </a>&nbsp; 
+<!--Google+ icon-->
+<a href="" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/HdT6jbRJRhqyPu3BKhi7_google-Plus-e1386022876181.png" style="height:20px; width:20px" /> </a>&nbsp; 
+<!--Twitter icon-->
+<a href="" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/3b3zdiavSf26SleQOaDd_twitter-e1386023015819.png" style="height:20px; width:20px" /> </a>&nbsp; 
+<!--Linkedin icon-->
+<a href="" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/dJtLdIsbRAix3zQhvygP_linkedin_icon_dark_hover-5be7d72ca83a10c0c76c32d141b0b828.png" style="height:20px; width:20px" /> </a>
+</div>
 
+      <!--Social icons end-->
+  </p>
 
+</footer>
 
   <div id="content">
     <!--Home-->
-    <div class="page" id="one">&nbsp
-		<h1 align="center">Home</h1>
+    <div class="page" id="one">
+		<img src="../images/j1.jpg" width="100%" height="15%" style="padding:0px;margin:0px;">
       <div class="row">
           <div class="col-xs-8 col-xs-offset-1">
               <div id="slideshow">
                 <div>
-                <img src="../images/1.jpg">
+                <br><img src="../images/1.jpg">
                  </div>
                 <div>
                 <img src="../images/2.jpg">
@@ -124,7 +101,7 @@
           </div> 
           <div class="col-xs-3">
           <h2>News & Updates</h2>
-            <div class="card">
+            <div class="card" style="height:25em;">
       <marquee direction="up">update<br>update<br>update</marquee>
     </div>
         
@@ -137,7 +114,7 @@
 
    <!--About -->
   <div class="page" id="six">&nbsp
-      <h1 align="center">About(Joyfest) </h1>
+      <h1 align="center">About </h1>
        <div class="row" style="z-index:1;">
   <div class="col-xs-1">
      <input id="showradio" type="checkbox" name="navigation" checked="checked"/>
@@ -165,14 +142,17 @@
       <div class="col-xs-5 ">
          <hr>
         <div class="abt" style="height:35em;overflow:auto;"> 
-          
+            <p><h3>What is Joyfest</h3></p>
+            <p>Joy Fest is a national movement where students do acts of giving, and get together as one for the underprivileged.Colleges students, teachers, principals, and NGOs come together for a noble cause. 500,000 students will be part of the Largest Youth Movement. Volunteers in 20 cities and 500 colleges!</p>
         </div>
       </div>
         
     <div class="col-xs-5">
         <hr>
          <div class="abt" style="height:35em;overflow:auto;"> 
-          
+         <p><h3>Our Aim</h3></p>
+          <p>The main aim of JOYFEST, an initiative of JAM Magazine is to sensitise the youth to the issues related to the underprivileged and to connect to them at a human level.
+JOYFEST will bring together the youth of India in the spirit of the Joy of Giving.</p>
         </div>
     
     </div>
@@ -375,9 +355,9 @@
 
 
 
-    <!--Update-->
+    <!--Who we are....-->
     <div class="page" id="four">&nbsp
-      <h1 align="center">Updates</h1>
+      <h1 align="center">Who we are...???</h1>
       <div class="row" style="z-index:1;">
   <div class="col-xs-1">
      <input id="showradio" type="checkbox" name="navigation" checked="checked"/>
@@ -402,18 +382,82 @@
   <label data-page="500" for="page6" class="check radio about"></label>
 </div>
     
-      <div class="col-xs-4 ">
+      <div class="col-xs-5 ">
          <hr>
         <div class="update" style="height:35em;overflow:auto;"> 
-          
+            <div class="carousel-info">
+                    <img alt="" src="http://keenthemes.com/assets/bootsnipp/img1-small.jpg" class="pull-left" style="width:15%;heigth:300%;">
+                    
+                    <div class="pull-left">
+                      <span class="testimonials-name">Lina Mars</span>
+                      <span class="testimonials-post">Commercial Director</span>
+                    </div>
+                  </div>
+                  <br>
+             <div class="carousel-info">
+                    <img alt="" src="http://keenthemes.com/assets/bootsnipp/img1-small.jpg" class="pull-left" style="width:15%;heigth:300%;">
+                    
+                    <div class="pull-left">
+                      <span class="testimonials-name">Lina Mars</span>
+                      <span class="testimonials-post">Commercial Director</span>
+                    </div>
+                  </div><br>
+                  
+                  <div class="carousel-info">
+                    <img alt="" src="http://keenthemes.com/assets/bootsnipp/img1-small.jpg" class="pull-left" style="width:15%;heigth:300%;">
+                    
+                    <div class="pull-left">
+                      <span class="testimonials-name">Lina Mars</span>
+                      <span class="testimonials-post">Commercial Director</span>
+                    </div>
+                  </div><br>
+                  <div class="carousel-info">
+                    <img alt="" src="http://keenthemes.com/assets/bootsnipp/img1-small.jpg" class="pull-left" style="width:15%;heigth:300%;">
+                    
+                    <div class="pull-left">
+                      <span class="testimonials-name">Lina Mars</span>
+                      <span class="testimonials-post">Commercial Director</span>
+                    </div>
+                  </div>     
         </div>
-      
+          
       </div>
         
-    <div class="col-xs-6 col-sm-6">
+    <div class="col-xs-6 col-sm-5">
         <hr>
          <div class="update" style="height:35em;overflow:auto;"> 
-          
+            <div class="carousel-info">
+                    <img alt="" src="http://keenthemes.com/assets/bootsnipp/img1-small.jpg" class="pull-left" style="width:15%;heigth:300%;">
+                    
+                    <div class="pull-left">
+                      <span class="testimonials-name">Lina Mars</span>
+                      <span class="testimonials-post">Commercial Director</span>
+                    </div>
+                  </div><br>
+                  <div class="carousel-info">
+                    <img alt="" src="http://keenthemes.com/assets/bootsnipp/img1-small.jpg" class="pull-left" style="width:15%;heigth:300%;">
+                    
+                    <div class="pull-left">
+                      <span class="testimonials-name">Lina Mars</span>
+                      <span class="testimonials-post">Commercial Director</span>
+                    </div>
+                  </div><br>
+                  <div class="carousel-info">
+                    <img alt="" src="http://keenthemes.com/assets/bootsnipp/img1-small.jpg" class="pull-left" style="width:15%;heigth:300%;">
+                    
+                    <div class="pull-left">
+                      <span class="testimonials-name">Lina Mars</span>
+                      <span class="testimonials-post">Commercial Director</span>
+                    </div>
+                  </div><br>
+                  <div class="carousel-info">
+                    <img alt="" src="http://keenthemes.com/assets/bootsnipp/img1-small.jpg" class="pull-left" style="width:15%;heigth:300%;">
+                    
+                    <div class="pull-left">
+                      <span class="testimonials-name">Lina Mars</span>
+                      <span class="testimonials-post">Commercial Director</span>
+                    </div>
+                  </div>
         </div>
     
     </div>
@@ -450,17 +494,9 @@
   <label data-page="500" for="page6" class="check radio about"></label>
 </div>
     
-      <div class="col-xs-4 ">
-         <hr>
-        <div class="card" style="background-color:white;margin:10px;">
-        <marquee direction="up">  comment<br> comment<br> comment</marquee>
-        </div>
+      <div class="col-xs-5 ">
       
-      </div>
-        
-    <div class="col-xs-6 col-sm-6">
-        
-        <form action="" method="POST" >
+         <form action="" method="POST" >
     <hr><br><b><u>Post a Comment:</u></b><br>
         <div class="form-group"><label>Email:<input type="text" class="form-control" id="email" name="email" placeholder="enter your email here"><br></div>
        <div class="form-group"><label> Name: <input type="text" class="form-control" id="name" name="name" placeholder="enter your name here"><br></div>
@@ -483,7 +519,16 @@
 
     }
     </script>
-    </form>    
+    </form> 
+        
+      
+      </div>
+        
+    <div class="col-xs-6 col-sm-5">
+    <hr>
+        <div class="card" style="background-color:white;margin:10px;height:25em;">        
+        <marquee direction="up">  comment<br> comment<br> comment</marquee>
+        </div>          
     
     </div>
     </div>

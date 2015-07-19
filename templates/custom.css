@@ -126,7 +126,11 @@ nav.sidebar ul li.active div.expandable:hover {
 .qutton_dialog{
   position: absolute;
 }
+#one{
+  padding-top:10px ;
+ /* background-image:url("../images/j2.jpg"); */
 
+}
 
 
 
