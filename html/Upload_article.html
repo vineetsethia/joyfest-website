@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Log In</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/styles.css" rel="stylesheet">
+
+		 <!-- Plugin CSS -->
+    <link rel="stylesheet" href="../startbootstrap-creative-1.0.0/css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../startbootstrap-creative-1.0.0/css/creative.css" type="text/css">
+	</head>
+	<body background="../images/header.jpg">
+<!--login modal-->
+<div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+      <div class="modal-header">
+          <h1 class="text-center">Log In</h1>
+      </div>
+      <div class="modal-body">
+          <form action="../api/login.php" method="post" class="form col-md-12 center-block">
+		  <div class="form-group">
+              <input type="text" name="article_head" class="form-control input-lg" placeholder="Title of the article" required>
+            </div>
+            <div class="form-group">
+              <textarea type="text" name="article_body" rows="10" class="form-control input-lg" placeholder="Body of the article" required></textarea>
+            </div>
+			<!-- photo upload remaining			
+			-->
+			<div class="form-group">
+              <input type="submit" name="cmd" value="Upload article" class="btn btn-primary btn-xl btn-block">
+              <!--<span class="pull-right"><a href="login.html">Log In</a></span><span><a href="startbootstrap-creative-1.0.0/index.html">Already Registered?</a></span>-->
+			  <span><br></span> <span><a href="../api/index.php">Return to homepage</a></span>
+            </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+          <div class="col-md-12">
+          <!--<button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>-->
+		  </div>	
+      </div>
+  </div>
+  </div>
+</div>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+	</body>
+</html>
