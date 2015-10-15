@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Log In</title>
+		<title>Upload</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -14,6 +14,12 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../startbootstrap-creative-1.0.0/css/creative.css" type="text/css">
+
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/normalize.css">
+			<link rel="stylesheet" href="../css/style1.css">
+
+		<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 	</head>
 	<body background="../images/header.jpg">
 <!--login modal-->
@@ -21,7 +27,7 @@
   <div class="modal-dialog">
   <div class="modal-content">
       <div class="modal-header">
-          <h1 class="text-center">Log In</h1>
+          <h1 class="text-center">Upload an Article</h1>
       </div>
       <div class="modal-body">
           <form action="../api/login.php" method="post" class="form col-md-12 center-block">
@@ -29,9 +35,14 @@
               <input type="text" name="article_head" class="form-control input-lg" placeholder="Title of the article" required>
             </div>
             <div class="form-group">
-              <textarea type="text" name="article_body" rows="10" class="form-control input-lg" placeholder="Body of the article" required></textarea>
-            </div>
-			<!-- photo upload remaining			
+            <!--  <textarea type="text" name="article_body" rows="10" class="form-control input-lg" placeholder="Body of the article" required></textarea>
+						-->
+						<textarea type="text" name="article_body" rows="10" class ="form-control input-lg ckeditor" id="editor1" placeholder="Body of the article" required ></textarea>
+  <script type="text/javascript">
+    CKEDITOR.replace('editor1');
+  </script>
+						</div>
+			<!-- photo upload remaining
 			-->
 			<div class="form-group">
               <input type="submit" name="cmd" value="Upload article" class="btn btn-primary btn-xl btn-block">
@@ -43,7 +54,7 @@
       <div class="modal-footer">
           <div class="col-md-12">
           <!--<button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>-->
-		  </div>	
+		  </div>
       </div>
   </div>
   </div>

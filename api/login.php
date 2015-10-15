@@ -8,6 +8,11 @@ if(isset($_POST["uname"])) $u_name=$_POST["uname"];
 if(isset($_POST["password"])) $password=$_POST["password"];
 if(isset($_POST["article_head"])) $article_head=$_POST["article_head"];
 if(isset($_POST["article_body"])) $article_body=$_POST["article_body"];
+if(isset($_POST["title"])) $title=$_POST["title"];
+if(isset($_POST["content"])) $content=$_POST["content"];
+if(isset($_POST["event_date"])) $date=$_POST["event_date"];
+if(isset($_POST["email"])) $email=$_POST["email"];
+if(isset($_POST["comment"])) $comment=$_POST["comment"];
 if(isset($_POST["cmd"])) $cmd=$_POST["cmd"];
 if($cmd=='Log In')
 {
@@ -40,6 +45,27 @@ else if($cmd=='Upload article')
 	$today = getdate();
 	$date=$today[year]."-".$today[mon]."-".$today[mday];
 	$sql = "insert into article values ('','$article_head','$article_body','$date')";
+	$f->exe($sql);
+	header("Location: index.php");
+}
+else if($cmd=='Create event')
+{
+	$sql = "insert into article values ('','$article_head','$article_body','$date')";
+	$f->exe($sql);
+	header("Location: index.php");
+}
+else if($cmd=='Create event')
+{
+	$path=$todir.basename($_FILES['img']['name']);
+	$path1=$todir.$_FILES['img']['name'];
+         move_uploaded_file( $_FILES['img']['tmp_name'],$path1);
+	$sql = "insert into article values ('','$title','$path1','$content','$date')";
+	$f->exe($sql);
+	header("Location: index.php");
+}
+else if($cmd=='Comment')
+{
+	$sql = "insert into comment values ('','$u_name','$email','$comment')";
 	$f->exe($sql);
 	header("Location: index.php");
 }

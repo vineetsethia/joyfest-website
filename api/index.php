@@ -19,7 +19,7 @@ if(isset($_SESSION["admin"]))
 $sql = "select * from article";
 $result = $f->tabledata($sql);
 //print_r($result);
-?>   
+?>
 <!DOCTYPE html>
 <html >
   <head>
@@ -29,18 +29,18 @@ $result = $f->tabledata($sql);
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--Css files-->
-      
+
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-    
+
       <link rel="stylesheet" href="../css/style.css">
     <!---->
-    
+
         <link rel="stylesheet" href="../css/style.css">
 
-    
-    
-    
+
+
+
   </head>
 
   <body>
@@ -56,13 +56,14 @@ $result = $f->tabledata($sql);
         <a href="gallery.php">Gallery</a>
         <a href="articles.php">Articles</a>
         <a href="contact.php">Contact</a>
-<?php   
+<?php
 echo "<a href='../html/upload_article.html'>Upload article</a>
-		<a href='contact.php'>Upload event</a>";
+		<a href='../html/events_create.html'>Create Event</a>";
+
 ?>
     </nav>
        </div>
-   </div> 
+   </div>
   </header>
   <div class="container-fluid">
     <div class="row">
@@ -89,9 +90,9 @@ echo "<a href='../html/upload_article.html'>Upload article</a>
   </div>
 </body>
 <!--Js files-->
-    
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="../js/imagenav.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
@@ -101,8 +102,8 @@ echo "<a href='../html/upload_article.html'>Upload article</a>
 
         <script src="../js/index.js"></script>
 
-    
-    
-    
+
+
+
   </body>
 </html>
