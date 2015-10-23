@@ -5,17 +5,7 @@ session_start();
 $admin=0;
 if(isset($_SESSION["admin"]))
 	$admin=$_SESSION["admin"];
-/*if()
-{
-	$user1=array();
-	$userid=$_SESSION['log'];
-	$sql1 = "select usertype from user where userid=$userid";
-	$result1 = $f->exe($sql1);
-	$user1 = mysqli_fetch_row($result1);
-	$temp = $user1[0];
-	mysqli_free_result($result1);
-}
-*/
+
 $sql = "select * from article";
 $result = $f->tabledata($sql);
 //print_r($result);

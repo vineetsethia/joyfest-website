@@ -14,9 +14,14 @@ if(isset($_POST["event_date"])) $date=$_POST["event_date"];
 if(isset($_POST["email"])) $email=$_POST["email"];
 if(isset($_POST["comment"])) $comment=$_POST["comment"];
 if(isset($_POST["cmd"])) $cmd=$_POST["cmd"];
+if(isset($_POST["gallery_title"])) $gtitle=$_POST["gallery_title"];
+if(isset($_POST["gallery_description"])) $gdecription=$_POST["gallery_description"];
+if(isset($_POST["img[]"])) $gimg=$_POST["img[]"];
+if(isset($_POST["gallery_year"])) $gyear=$_POST["gallery_year"];
+
 if($cmd=='Log In')
 {
-	if(!isset($u_name) || !isset($password)) 
+	if(!isset($u_name) || !isset($password))
 	{
 		header("Location: ../html/login.html");
 	}
@@ -29,10 +34,10 @@ if($cmd=='Log In')
 		$encrypted_password=md5($password);
 		if($result[1]==$encrypted_password)
 		{
-			$_SESSION['admin'] = $row[0];			
-   			header("Location: index.php");
+			$_SESSION['admin'] = $row[0];
+   			header("Location: admin_home.php");
 		}
-		else 
+		else
 		{
 			//$q="Wrong username or password.";
 			//header("Location: ../html/login.html");
@@ -82,7 +87,7 @@ else if($cmd=='Comment')
 	$uh = $uname[0][0];
 	$sql = "insert into blog values ('','$date','$uh','$bloghead','$blogbody','1')";
 	$f->exe($sql);
-	
+
 	$sql="select max(blog_id) from blog";
 	$temp=$f->tabledata($sql);
 	$h = $temp[0][0];
@@ -96,7 +101,7 @@ else if($cmd=='Comment')
 	        $path = "../img/$imagename";
     	    $sql = "INSERT INTO image (image, blog_id) VALUES ('$path','$h')";
 			$f->exe($sql);
-        }	
+        }
     	else
     	{
         	$ext=end(explode(".",$imagename));
@@ -118,7 +123,7 @@ else if($cmd=='Edit blog')
 	}
 	$sql = "update blog set values bloghead='$bloghead', body='$blogbody'";
 	$f->exe($sql);
-	
+
 	header("Location: home1.php");
 }
 

@@ -1,16 +1,16 @@
-/* = @media queries  info 
+/* = @media queries  info
 ===========================*/
 body:before{margin:1em;}
 @media (min-width: 980px){
   body:before{
     content:"info: Large desktop"; color:black;}}
-@media (min-width: 768px) and (max-width: 979px) { 
+@media (min-width: 768px) and (max-width: 979px) {
   body:before{
     content:"info: Portrait tablet to landscape desktop"; color:black;}}
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
   body:before{
     content:"info: Landscape phone to portrait tablet "; color:black;}}
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
   body:before{
     content:"info: Landscape phones and down"; color:black;}}
 
@@ -320,25 +320,23 @@ body{
   .box{width:60%;}
 }
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { 
+@media (min-width: 768px) and (max-width: 979px) {
   .gallery_item {width: 32.83%;}
   .gallery_item_preview a img{height:180px;}
   .box{width:70%;}
 }
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
   .gallery_item {width: 49.45%;}
   .gallery_item_preview a img{height:180px;}
   .box{margin: auto;background: #F8F8F8;padding: 4em 1em 1em 1em;width:80%;}
   .cl{top: 0;right: 0.5em;}
 }
 /* Landscape phones and down */
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
   .gallery_item {width: 100%;}
   .gallery_item_preview a img{height:200px;}
   .box{background: #F8F8F8;padding: 4em 1em 1em 1em;width:100%;}
   .cl{top: 0;right: 0.5em;}
   .gallery_item_list{width:100% !important;}
 }
-
-
