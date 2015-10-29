@@ -187,10 +187,10 @@ $result = $f->tabledata($sql);
 
 
 
-						<form action="login.php" method="post" class="form col-md-12 center-block">
-						<input type="text" class="form-control input-lg" name="uname" placeholder="Your name" required><br>
+						<form action="contact.php" method="post" class="form col-md-12 center-block">
+						<input type="text" class="form-control input-lg" name="name" placeholder="Your name" required><br>
 						<input type="text" class="form-control input-lg" name="email" placeholder="Your Email" required><br>
-						<textarea name="comment" rows="3" class ="form-control input-lg ckeditor" id="editor1" placeholder="Comment here"></textarea><br>
+						<textarea name="comments" rows="3" class ="form-control input-lg ckeditor" id="editor1" placeholder="Comment here"></textarea><br>
 						<input type="submit" name="cmd" class="btn btn-primary btn-xl btn-block" value="Submit">
 						</form>
 

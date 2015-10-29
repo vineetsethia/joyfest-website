@@ -6,21 +6,7 @@ $admin=0;
 if(isset($_SESSION["admin"]))
 	$admin=$_SESSION["admin"];
 
-	$title = $_POST['event_name'];
-	$info = $_POST['event_info'];
-	$date=$_POST['event_date'];
-	$upload_image = $_FILES["myimage"]["name"];
-	$folder = "images/";
 
-	move_uploaded_file($_FILES["myimage"]["tmp_name"], "$folder". $_FILES["myimage"]["name"]);
-//<!-- Need to beworked out -->
-
-/*
-	$sql="INSERT INTO event ( event_name, event_info, event_image_path,)
-	VALUES('$title', '$info', '$blog', '$folder', '$upload_image', '$email')";
-	mysqli_query($con,$sql) or die( mysqli_error($sql));
-	header('location: home.php');
-*/
 
 ?>
 
@@ -33,12 +19,23 @@ if(isset($_SESSION["admin"]))
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
-		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+		<link href="../css/styles.css" rel="stylesheet">
+
+     <!-- Plugin CSS -->
+    <link rel="stylesheet" href="../startbootstrap-creative-1.0.0/css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../startbootstrap-creative-1.0.0/css/creative.css" type="text/css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+      <link rel="stylesheet" href="../css/style1.css">
+
+    <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+
 		<link href="../css/admin_style.css" rel="stylesheet">
 	</head>
-	<body>
+	<body style="overflow:auto;">
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -48,7 +45,8 @@ if(isset($_SESSION["admin"]))
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Joyfest Admin Panel</a>
+<a class="navbar-brand" href="index.php">Home</a>
+		      <a class="navbar-brand" href="admin_home.php">Admin Panel</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -93,7 +91,7 @@ if(isset($_SESSION["admin"]))
 
           <div class="row placeholders">
 						<h2>Add an Event</h2>
-						<form action="admin_events.php" method="post" class="form col-md-12 center-block">
+						<form action="uploadevents.php" enctype="multipart/form-data" method="post" class="form col-md-12 center-block">
 			  <div class="form-group">
 	              <input type="text" name="title" class="form-control input-lg" placeholder="Title of the event" >
 	            </div>
@@ -104,150 +102,56 @@ if(isset($_SESSION["admin"]))
 	  </script></div>
 	      Select image to upload:
 	    		<div class="form-group">
-	              <input type="file" class="form-control input-lg" name="img[]" accept="image/*" multiple>
+	              <input type="file" class="form-control input-lg" name="img" accept="image/*" multiple>
 	            </div>
-				<div class="form-group">
-	              <input type="date" name="event_date" class="form-control input-lg" placeholder="Date of the event" >
-	            </div>
+
 				<div class="form-group">
 	              <input type="submit" name="cmd" value="Create event" class="btn btn-primary btn-xl btn-block">
 	              <!--<span class="pull-right"><a href="login.html">Log In</a></span><span><a href="startbootstrap-creative-1.0.0/index.html">Already Registered?</a></span>-->
-				  <span><br></span> <span><a href="../api/index.php">Return to homepage</a></span>
+
 	            </div>
 	          </form>
 
           </div>
 
           <hr>
+					<h2>All events</h2>
+					<?php
+						$sql="select * from events";
+						$result= $f->tabledata($sql);
 
-          <h2 class="sub-header">Section title</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                </tr>
-                <tr>
-                  <td>1,002</td>
-                  <td>amet</td>
-                  <td>consectetur</td>
-                  <td>adipiscing</td>
-                  <td>elit</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>Integer</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>libero</td>
-                  <td>Sed</td>
-                  <td>cursus</td>
-                  <td>ante</td>
-                </tr>
-                <tr>
-                  <td>1,004</td>
-                  <td>dapibus</td>
-                  <td>diam</td>
-                  <td>Sed</td>
-                  <td>nisi</td>
-                </tr>
-                <tr>
-                  <td>1,005</td>
-                  <td>Nulla</td>
-                  <td>quis</td>
-                  <td>sem</td>
-                  <td>at</td>
-                </tr>
-                <tr>
-                  <td>1,006</td>
-                  <td>nibh</td>
-                  <td>elementum</td>
-                  <td>imperdiet</td>
-                  <td>Duis</td>
-                </tr>
-                <tr>
-                  <td>1,007</td>
-                  <td>sagittis</td>
-                  <td>ipsum</td>
-                  <td>Praesent</td>
-                  <td>mauris</td>
-                </tr>
-                <tr>
-                  <td>1,008</td>
-                  <td>Fusce</td>
-                  <td>nec</td>
-                  <td>tellus</td>
-                  <td>sed</td>
-                </tr>
-                <tr>
-                  <td>1,009</td>
-                  <td>augue</td>
-                  <td>semper</td>
-                  <td>porta</td>
-                  <td>Mauris</td>
-                </tr>
-                <tr>
-                  <td>1,010</td>
-                  <td>massa</td>
-                  <td>Vestibulum</td>
-                  <td>lacinia</td>
-                  <td>arcu</td>
-                </tr>
-                <tr>
-                  <td>1,011</td>
-                  <td>eget</td>
-                  <td>nulla</td>
-                  <td>Class</td>
-                  <td>aptent</td>
-                </tr>
-                <tr>
-                  <td>1,012</td>
-                  <td>taciti</td>
-                  <td>sociosqu</td>
-                  <td>ad</td>
-                  <td>litora</td>
-                </tr>
-                <tr>
-                  <td>1,013</td>
-                  <td>torquent</td>
-                  <td>per</td>
-                  <td>conubia</td>
-                  <td>nostra</td>
-                </tr>
-                <tr>
-                  <td>1,014</td>
-                  <td>per</td>
-                  <td>inceptos</td>
-                  <td>himenaeos</td>
-                  <td>Curabitur</td>
-                </tr>
-                <tr>
-                  <td>1,015</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+						echo '
+									<div class="container">
+									<div class="table-responsive">
+
+									<table class="table">
+									<tr>
+										<th>EventID</th><th>Event_Title</th>
+										<th>Event_body </th>
+										<th></th>
+
+									</tr>';
+
+						foreach($result as $article){
+
+
+								echo '<tr>
+									<td>'.$article[0].'</td>
+									<td>'.$article[1].'</td>
+									<td>'.$article[2].'</td>
+
+									<td><a href="deleteevent.php?id="'.$article[0].'">Delete</a> </td>';
+
+
+						}
+						echo '		  </table>
+								</div>
+							</div>
+
+								';
+
+?>
+
 
 
 

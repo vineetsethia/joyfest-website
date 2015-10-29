@@ -40,7 +40,7 @@ if($cmd=='Log In')
 		else
 		{
 			//$q="Wrong username or password.";
-			//header("Location: ../html/login.html");
+			header("Location: ../html/login.html");
 		}
 	}
 }

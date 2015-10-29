@@ -6,7 +6,7 @@ $admin=0;
 if(isset($_SESSION["admin"]))
 	$admin=$_SESSION["admin"];
 
-$sql = "select * from article";
+$sql = "select * from article order by article_id desc";
 $result = $f->tabledata($sql);
 //print_r($result);
 function truncate($mytext,$id) {
@@ -66,15 +66,9 @@ function truncate($mytext,$id) {
       <ul class="nav navbar-nav" >
 
         <li><a href="index.php">Home</a></li>
-         <!-- <a href="../html/about.html">About</a>-->
         <li><a href="event.php">Events</a></li>
         <li><a href="gallery.php">Gallery</a></li>
         <li><a href="articles.php">Articles</a></li>
-        <li><a href="contact.php">Contact</a></li>
-<?php
-echo "<li><a href='../html/upload_article.html'>Upload article</a></li>
-		<li><a href='#'>Upload event</a></li>";
-?>
 
       </ul>
 
@@ -95,15 +89,17 @@ echo "<li><a href='../html/upload_article.html'>Upload article</a></li>
 foreach($result as $article)
 {
 	echo '
+	<section>
+	<div class="card" >
 	<div class="gallery_item">
 		<!-- Gallery  item preview -->
 		<span class="gallery_item_preview">
 
 
-				<h3>'.$article[1].'</h3>
+				<h3 align="center" style="font:red">'.$article[1].'</h3>
 				<p>'.truncate($article[2],$article[0]).'</p>
 				<a href="#" data-js="'.$article[0].'">Read More...</a>
-				</span>   <br> <button><span class="glyphicon glyphicon-remove" aria-hidden="true"></button>    </span>
+				<br>
 
 		<div data-lk="'.$article[0].'" class="gallery_item_full">
 			<div class="box">
@@ -111,7 +107,9 @@ foreach($result as $article)
 				<p>'.$article[2].'</p>
 			</div>
 		</div>
-	</div>';
+	</div>
+	</div>
+	</section>';
 
 }
 ?>

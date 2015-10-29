@@ -4,8 +4,10 @@ $f = new functiona();
 session_start();
 $admin=0;
 if(isset($_SESSION["admin"]))
-	$admin=$_SESSION["admin"];
-
+	{
+		$admin=$_SESSION["admin"];
+		echo "true";
+	}
 	function truncate($mytext,$id) {
 	    //Number of characters to show
 	    $chars =30 ;
@@ -54,12 +56,21 @@ if(isset($_SESSION["admin"]))
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Joyfest Admin Panel</a>
+          <a class="navbar-brand" href="index.php">Home</a>
+		      <a class="navbar-brand" href="admin_home.php">Admin Panel</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
 
           </ul>
+					<?php
+
+							if($_SESSION["admin"]){
+
+									echo '<a href="logout.php"><span class="glyphicon glyphicon-off" style="color:white" aria-hidden="true"></span></a>';
+							}
+
+					 ?>
           <!-- Optional Search -->
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
@@ -100,7 +111,7 @@ if(isset($_SESSION["admin"]))
         <div class="row placeholders">
             <h3>Upload an article</h3>
 
-            <form action="login.php" method="post" class="form col-md-12 center-block">
+            <form action="uploadapost.php" method="post" class="form col-md-12 center-block">
   		  <div class="form-group">
                 <input type="text" name="article_head" class="form-control input-lg" placeholder="Title of the article" required>
               </div>
@@ -128,7 +139,7 @@ if(isset($_SESSION["admin"]))
 
           <hr>
 
-          <h2 >All Articles</h2>
+          <h2 ><a href="articles.php">All Articles</a></h2>
           <div class="table-responsive">
             <?php
 							$sql="select * from article";
@@ -152,9 +163,10 @@ if(isset($_SESSION["admin"]))
 									echo '<tr>
 										<td>'.$article[0].'</td>
 										<td>'.$article[1].'</td>
-										<td>'.truncate($article[2],$article[0]).'</td>
+										<td>'.$article[2].'</td>
 										<td>'.$article[3].'</td>
-										<td><a href="deletepost.php?id='.$article[0].'">Delete</a></td>';
+                    <td><a href="deletepost.php?id='.$article[0].'">Delete</a> </td>';
+
 
 							}
 							echo '		  </table>

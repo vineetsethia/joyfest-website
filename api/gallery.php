@@ -42,41 +42,34 @@ $yr=2015;
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>      </button>
-      <a class="navbar-brand" href="#">Joyfest</a>    </div>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Joyfest</a>
+    </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1" >
       <ul class="nav navbar-nav" >
 
-       <li><a href="index.php">Home</a></li>
-         <!-- <a href="../html/about.html">About</a>-->
+	    <li><a href="index.php">Home</a></li>
         <li><a href="event.php">Events</a></li>
         <li><a href="gallery.php">Gallery</a></li>
         <li><a href="articles.php">Articles</a></li>
-        <li><a href="contact.php">Contact</a></li>
-<?php
-echo "<li><a href='../html/upload_article.html'>Upload article</a></li>
-		<li><a href='#'>Upload event</a></li>";
-?>
+
       </ul>
+
+
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-    <!--
-  <a href="#" class="icon_list" data-js="list">
-  <span>� -</span>
-  <span>� -</span>
-  <span>� -</span>
-</a>
--->
+   
 <div class="wrapper">
   <div class="wrapper_inner">
     <!-- Gallery -->
 		<form method="post" id="report_filter" action="gallery.php" >
 			<select name="name" onchange="document.getElementById('report_filter').submit();">
 
-					<option value="--" >Filter by</option>
+					
 					<option value="2015">2015</option>
 					<option value="2014">2014</option>
 					<option value="2013">2013</option>
@@ -90,7 +83,7 @@ echo "<li><a href='../html/upload_article.html'>Upload article</a></li>
 
 				$yr=$_POST['name'];
 
-				$sql = "select * from gallery where gallery_year=".$yr;
+				$sql = "select * from images where year=".$yr;
 				$result = $f->tabledata($sql);
 
 					echo '<h1>'.$yr.'</h1>';
@@ -100,17 +93,17 @@ echo "<li><a href='../html/upload_article.html'>Upload article</a></li>
 							<!-- Gallery  item preview -->
 							<span class="gallery_item_preview">
 								<a href="#" data-js="1">
-									<img src="'.$item[3].'" alt="" /><span>
-									<h3>'.$item[1].'</h3>
-									<p>'.$item[2].'</p>
+									<img src="'.$item[2].'" alt="" height="40px" width="40px" /><span>
+									<h3>'.$item[0].'</h3>
+									<p>'.$item[1].'</p>
 
 									</span></a>        </span>
 							<!-- Gallery  item full -->
 							<div data-lk="1" class="gallery_item_full">
 								<div class="box">
-									<img src="'.$item[3].'" alt="" />
-									<h3>'.$item[1].'</h3>
-									<p>'.$item[2].'</p>
+									<img src="'.$item[2].'" alt="" />
+									<h3>'.$item[0].'</h3>
+									<p>'.$item[1].'</p>
 									</div>
 							</div>
 						</div>

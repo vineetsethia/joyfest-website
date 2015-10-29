@@ -19,9 +19,20 @@ if(isset($_SESSION["admin"]))
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
-		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+		<link href="../css/styles.css" rel="stylesheet">
+
+		 <!-- Plugin CSS -->
+		<link rel="stylesheet" href="../startbootstrap-creative-1.0.0/css/animate.min.css" type="text/css">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="../startbootstrap-creative-1.0.0/css/creative.css" type="text/css">
+
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/normalize.css">
+			<link rel="stylesheet" href="../css/style1.css">
+
+		<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+
 		<link href="../css/admin_style.css" rel="stylesheet">
 	</head>
 	<body>
@@ -34,7 +45,8 @@ if(isset($_SESSION["admin"]))
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Joyfest Admin Panel</a>
+          <a class="navbar-brand" href="index.php">Home</a>
+		      <a class="navbar-brand" href="admin_home.php">Admin Panel</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -79,7 +91,7 @@ if(isset($_SESSION["admin"]))
 
           <div class="row placeholders">
 
-						<form action="../api/login.php" method="post" class="form col-md-12 center-block">
+						<form action="uploadgallery.php" enctype="multipart/form-data" method="post" class="form col-md-12 center-block">
 			  <div class="form-group">
 	              <input type="text" name="gallery_title" class="form-control input-lg" placeholder="Title" >
 	            </div>
@@ -90,37 +102,70 @@ if(isset($_SESSION["admin"]))
 	  </script></div>
 	      Select image to upload:
 	    		<div class="form-group">
-	              <input type="file" class="form-control input-lg" name="img[]" accept="image/*" multiple>
+	              <input type="file" name="img" class="form-control input-lg" >
 	            </div>
 				<div class="form-group">
 	              <input type="year" name="gallery_date" class="form-control input-lg" placeholder="Year" >
 	            </div>
 				<div class="form-group">
 	              <input type="submit" name="cmd" value="Insert" class="btn btn-primary btn-xl btn-block">
-	              <!--<span class="pull-right"><a href="login.html">Log In</a></span><span><a href="startbootstrap-creative-1.0.0/index.html">Already Registered?</a></span>-->
+
 
 	            </div>
 	          </form>
 
-
-
-
-
-
           </div>
 
           <hr>
-
-          <h2 class="sub-header">Section title</h2>
+          <h2 ><a href="galley.php">Gallery</a></h2>
           <div class="table-responsive">
+            <?php
+							$sql="select * from images order by year desc";
+							$result= $f->tabledata($sql);
 
+							echo '
+										<div class="container">
+										<div class="table-responsive">
+
+										<table class="table">
+										<tr>
+											<th>Title</th><th>Description</th>
+											<th>image path</th><th>Year</th>
+											<th></th>
+
+										</tr>';
+
+							foreach($result as $article){
+
+
+									echo '<tr>
+										<td>'.$article[0].'</td>
+										<td>'.$article[1].'</td>
+										<td>'.$article[2].'</td>
+										<td>'.$article[3].'</td>
+                    <td><a href="deleteimage.php?id='.$article[0].'">Delete</a> </td>';
+
+
+							}
+							echo '		  </table>
+									</div>
+								</div>
+
+									';
+
+
+
+							?>
           </div>
 
 
 
-      </div><!--/row-->
+
+
+
+      </div>
 	</div>
-</div><!--/.container-->
+</div>
 
 
 
