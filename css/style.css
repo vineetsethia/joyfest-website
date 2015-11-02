@@ -1,4 +1,4 @@
-
+/* this is very good code yar*/
 html,
 body
  { overflow: hidden; }
@@ -7,6 +7,9 @@ body
     position: static;
     
 }
+
+
+
 #content{
     position:absolute;
 }
