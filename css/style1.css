@@ -87,7 +87,7 @@ a:focus{
 =======================*/
 body{
   background:#ECECEC;
-  overflow-X:hidden;
+  overflow-X:visible;
   font-size:13px;
   font-family: 'Metrophobic', sans-serif;
   font-weight:400;
@@ -178,7 +178,7 @@ body{
   background-color:#fff;
   background-color:rgba(255,255,255,0.8);
   z-index: 100;
-  overflow:hidden;
+  overflow:visible;
 }
 .gallery_item_full img {
   display: block;
@@ -194,7 +194,7 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  overflow:auto;
+  overflow:visible;
   width:50%;
   text-align:left;
 }

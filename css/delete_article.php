@@ -1,5 +1,7 @@
 <?php
-  $servername = "localhost";
+session_start();
+
+$servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "joyfest";
@@ -12,10 +14,10 @@ if (!$conn) {
 
  $id=$_REQUEST['id'];
  echo $id;
-	$sql = "DELETE from events where eventid='$id'";
+	$sql = "DELETE from article where article_id='$id'";
 
    if (mysqli_query($conn, $sql) ) {
-    header('Location: admin_events.php');
+    header('Location: admin_home.php');
 
    }
   else {

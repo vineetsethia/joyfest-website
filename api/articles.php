@@ -40,7 +40,13 @@ function truncate($mytext,$id) {
          }
       </style>
     <!---->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 
 
@@ -120,6 +126,43 @@ foreach($result as $article)
 
   </div>
 
+
+   <!-- Footer of the webpage-->
+    <footer>
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <ul class="list-inline">
+                          <li>
+                              <a href="#">Home</a>
+                          </li>
+                          <li class="footer-menu-divider">&sdot;</li>
+                          <li>
+                              <a href="#about">About</a>
+                          </li>
+                          <li class="footer-menu-divider">&sdot;</li>
+                          <li>
+                              <a href="#services">Services</a>
+                          </li>
+                          <li class="footer-menu-divider">&sdot;</li>
+                          <li>
+                              <a href="#contact">Contact</a>
+                          </li>
+                          <li class="footer-menu-divider">&sdot;</li>
+                          <li>
+                              <a href="devlopers.html">Members</a>
+                          </li>
+                          <li class="footer-menu-divider">&sdot;</li>
+                          <li>
+                              <a href="devlopers.html">Devlopers</a>
+                          </li>
+                      </ul>
+                      <p class="copyright text-muted small">Copyright <a href="../html/login.html">&copy;</a> Joyfest, NIT Surat </p>
+                  </div>
+              </div>
+          </div>
+      </footer>
+
 </body>
 <!--Js files-->
 
@@ -134,6 +177,7 @@ foreach($result as $article)
 <script src="../js/index.js"></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="../js/index1.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
 
 
 

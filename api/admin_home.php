@@ -63,19 +63,16 @@ if(isset($_SESSION["admin"]))
           <ul class="nav navbar-nav navbar-right">
 
           </ul>
-					<?php
+				<!--	<?php
 
 							if($_SESSION["admin"]){
 
 									echo '<a href="logout.php"><span class="glyphicon glyphicon-off" style="color:white" aria-hidden="true"></span></a>';
 							}
 
-					 ?>
-          <!-- Optional Search -->
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
-        <!---->
+					 ?>-->
+           <a href="admin_logout.php"><img src="../img/logout.png" class="navbar-right img-responsive" height="3%" width="3%" style="margin:2px;"></a>
+      
         </div>
       </div>
 </nav>
@@ -114,7 +111,11 @@ if(isset($_SESSION["admin"]))
             <form action="uploadapost.php" method="post" class="form col-md-12 center-block">
   		  <div class="form-group">
                 <input type="text" name="article_head" class="form-control input-lg" placeholder="Title of the article" required>
-              </div>
+
+          </div>
+          <div class="form-group">
+            <input type="date" name="article_date" class="form-control"required>
+          </div>
               <div class="form-group">
 
   						<textarea type="text" name="article_body" rows="10" class ="form-control input-lg ckeditor" id="editor1" placeholder="Body of the article" required ></textarea>

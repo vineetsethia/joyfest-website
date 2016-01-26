@@ -221,6 +221,14 @@ $result = $f->tabledata($sql);
 													<li>
 															<a href="#contact">Contact</a>
 													</li>
+													<li class="footer-menu-divider">&sdot;</li>
+													<li>
+															<a href="devlopers.html">Members</a>
+													</li>
+													<li class="footer-menu-divider">&sdot;</li>
+													<li>
+															<a href="devlopers.html">Devlopers</a>
+													</li>
 											</ul>
 											<p class="copyright text-muted small">Copyright <a href="../html/login.html">&copy;</a>	Joyfest, NIT Surat </p>
 									</div>

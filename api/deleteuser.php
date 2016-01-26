@@ -1,4 +1,5 @@
 <?php
+
   $servername = "localhost";
 $username = "root";
 $password = "";
@@ -12,10 +13,10 @@ if (!$conn) {
 
  $id=$_REQUEST['id'];
  echo $id;
-	$sql = "DELETE from events where eventid='$id'";
+	$sql = "DELETE from contact where name='$id'";
 
    if (mysqli_query($conn, $sql) ) {
-    header('Location: admin_events.php');
+    header('Location: admin_users.php');
 
    }
   else {

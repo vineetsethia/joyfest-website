@@ -52,11 +52,7 @@ if(isset($_SESSION["admin"]))
           <ul class="nav navbar-nav navbar-right">
 
           </ul>
-          <!-- Optional Search -->
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
-        <!---->
+          <a href="admin_logout.php"><img src="../img/logout.png" class="navbar-right img-responsive" height="3%" width="3%" style="margin:2px;"></a>
         </div>
       </div>
 </nav>

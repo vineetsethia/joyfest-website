@@ -42,11 +42,7 @@ $result = $f->tabledata($sql);
           <ul class="nav navbar-nav navbar-right">
 
           </ul>
-          <!-- Optional Search -->
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
-        <!---->
+          <a href="admin_logout.php"><img src="../img/logout.png" class="navbar-right img-responsive" height="3%" width="3%" style="margin:2px;"></a>
         </div>
       </div>
 </nav>
@@ -111,7 +107,12 @@ while ($row=mysqli_fetch_array($rs))
 		$p=$row['name'];
 	$p2=$row['email'];
 	$p3=$row['message'];
-	echo "<tr><td>$p</td><td>$p2</td><td>$p3</td></tr>";
+	echo '<tr>
+  <td>'.$p.'</td>
+  <td>'.$p2.'</td>
+  <td>'.$p3.'</td>
+  <td><a href="deleteuser.php?id='.$row['name'].'">Delete</a> </td>
+  </tr>';
 	}
 	echo "</tbody></table></div>";
 ?>

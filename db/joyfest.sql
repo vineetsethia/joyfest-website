@@ -126,6 +126,7 @@ INSERT INTO `images` (`title`, `description`, `imgpath`, `year`) VALUES
 ('hvhbv', 'cbcgb', '../img/Lights.jpg', 2014),
 ('trd', 'dgd', '../img/diwali.jpg', 2013);
 
+
 -- --------------------------------------------------------
 
 --
